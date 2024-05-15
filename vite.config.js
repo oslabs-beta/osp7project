@@ -9,7 +9,11 @@ dotenv.config({ path: path.resolve(__dirname, './.env') });
 export default defineConfig(({ mode }) => {
 
   const config = {
-    plugins: [react()],
+    plugins: [
+      react({
+        jsxRuntime: 'classic',
+      }),
+    ],
     define: {
       captchaKey: `"${process.env.VITE_CAPTCHA_KEY}"`,
     },

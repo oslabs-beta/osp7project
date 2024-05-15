@@ -144,6 +144,9 @@ const Dashboard = () => {
   function Body() {
     return (
       <div className='body'>
+        <h1 className="text-sm font-bold underline text-cyan-500">
+      Hello world!
+    </h1>
         {currentPage === 'Home' && (
           <HomeDisplay traces={traceList} currentTrace={currentTrace} loading={loading} />
         )}
