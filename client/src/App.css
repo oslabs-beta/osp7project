@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 #root {
   
   margin: 0;
   text-align: center;
+  font-family: 'Roboto';
 }
 
 .logo {

@@ -157,7 +157,7 @@ const HomeDisplay = (props) => {
     
 
     return (
-        <div className={'metrics__home__container'}>
+        <div className={'grid grid-cols-3 bg-neutral-900'}>
             {props.loading && (<img className='loading-spinner' src={spinner} alt='Loading' />)}
             <SimpleDataDisplay label={'Invocations'} metric={invocationCount} />
             <SimpleDataDisplay label={'Clean'} metric={successCount} />

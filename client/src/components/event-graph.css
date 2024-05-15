@@ -19,13 +19,6 @@
   scroll-behavior:auto;
 }
 
-.metrics__info__display {
-  background-color: #191919;
-  height: 160px;
-  width: 300px;
-  padding: 40px;
-  margin: 10px;
-}
 
 .metrics__info__display h2 {
   color: #ff3300;
