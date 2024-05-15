@@ -77,7 +77,7 @@ const customStyles = {
 const LogPanel = (props) => {
 
   return (
-    <div className='LogPanel'>
+    <div className='bg-neutral-800 w-1/2 relative right-0 scroll-auto'>
       <h3>Log Detail:</h3>
       <DataTable
             columns={columns}

@@ -1,11 +1,4 @@
-.NavBar{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-style: inset;
-    border-color:rgb(93, 93, 93);
-    border-width: 3px;
-}
+
 #logo{
     display:flex;
     padding-left:10px;

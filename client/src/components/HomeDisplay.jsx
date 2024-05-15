@@ -163,7 +163,9 @@ const HomeDisplay = (props) => {
             <SimpleDataDisplay label={'Clean'} metric={successCount} />
             <SimpleDataDisplay label={'With Errors'} metric={errorCount} />
             <SimpleDataDisplay label={'Avg Duration'} metric={avgDuration} />
-            <div className={'metrics__visual__display'}>
+            <div className={'m-1 bg-neutral-800'}>
+              <div className='text-left ml-4 mt-4 text-sm text-slate-300'>Unique Functions</div>
+              <div className='p-4'>
               <PieChart
                 data={uniqueFuncs}
                 viewBoxSize={[100,100]}
@@ -180,8 +182,11 @@ const HomeDisplay = (props) => {
                     fontSize: '4px'
                }}
                 />
+                </div>
             </div>
-            <div className={'metrics__visual__display'}>
+            <div className={'m-1 bg-neutral-800'}>
+              <div className='text-left ml-4 mt-4 text-sm text-slate-300'>Origins</div>
+              <div className='p-4'>
               <PieChart
                 data={origins}
                 viewBoxSize={[100,100]}
@@ -198,6 +203,7 @@ const HomeDisplay = (props) => {
                     fontSize: '4px'
                }}
                 />
+                </div>
             </div>
 
         </div>

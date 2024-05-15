@@ -188,30 +188,46 @@ const Dashboard = () => {
   return (
     <div>
       <NavBar />
-      <div id='dashboardBody'>
-        <div id='sideBar'>
-          <button onClick={() => setCurrentPage('Home')} title='Home'>
+      <div className='flex'>
+        <div className='p-1 w-[3vw] flex flex-col text-center'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('Home')} title='Home'>
             <img src={homeIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('EventGraph')} title='Event Graph'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('EventGraph')} title='Event Graph'>
             <img src={eventGraphIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('AppTree')}>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('AppTree')}>
             <img src={mapIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('TraceList')}>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('TraceList')}>
             <img src={traceListIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('Metrics')} title='Metrics'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('Metrics')} title='Metrics'>
             <img src={metricsIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('Team')} title='Team'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('Team')} title='Team'>
             <img src={teamIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('Settings')}>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('Settings')}>
             <img src={settingsIcon} width='16px'></img>
           </button>
-          <button onClick={()=>logout()} title='Logout'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={()=>logout()} title='Logout'>
             <img src={logoutIcon} width='16px'></img>
           </button>
         </div>

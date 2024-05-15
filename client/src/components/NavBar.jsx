@@ -3,10 +3,11 @@ import './nav-bar.css';
 import pulse from '../assets/pulse.svg';
 import { Link } from 'react-router-dom';
 
+
 const NavBar = (props) => {
   return (
-    <div className='NavBar'>
-      <div id='logo'>
+    <div className='flex flex-row justify-between bg-neutral-900'>
+      <div className='flex pl-2'>
         <Link to='/dashboard'>
           <img src={pulse} width='48px' alt='LambdaPulse' />
         </Link>
