@@ -7,4 +7,24 @@
   font-family: 'Roboto';
 }
 
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
 
+.datepicker__override {
+  color: #ffffff;
+}
+
+.datepicker__popper__override div div div  {
+  background-color: #232323;
+  color: #ffffff;
+}
+
+button{
+  color:rgb(255, 51, 0);
+  background-color: #252525
+}

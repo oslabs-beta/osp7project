@@ -231,7 +231,7 @@ const Dashboard = () => {
             <img src={logoutIcon} width='16px'></img>
           </button>
         </div>
-        <div id='bodyContent'>
+        <div className='w-[94vw] bg-neutral-900'>
           <Body />
         </div>
       </div>

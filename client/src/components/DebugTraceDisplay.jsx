@@ -154,7 +154,7 @@ const flattenTrace = (trace) => {
 const DebugTraceDisplay = (props) => {
 
   return (
-    <div className='debug-trace-display'>
+    <div className='relative overflow-x-scroll max-w-[85%]'>
       <h3>Segment Detail:</h3>
       <DataTable
         columns={columns}

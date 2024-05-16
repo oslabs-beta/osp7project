@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import SimpleDataDisplay from './SimpleDataDisplay';
 import { PieChart } from 'react-minimal-pie-chart';
 import spinner from '../assets/pulse-1.1s-200px.svg';
-import './HomeDisplay.css';
+//import './HomeDisplay.css';
 
 const getStartLocale = (startSec) => {
   let start = new Date(0);
@@ -154,7 +154,6 @@ const HomeDisplay = (props) => {
     const origins = tallyToCircle(tallyOrigins(flattenTrace(props.traces[props.currentTrace])));
     
     const uniqueFuncs = uniqueFunctionsToCircle(uniqueFunctions(props.traces));
-    
 
     return (
         <div className={'grid grid-cols-3 bg-neutral-900'}>

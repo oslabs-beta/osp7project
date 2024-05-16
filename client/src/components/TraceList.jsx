@@ -1,7 +1,7 @@
 import {useEffect,useState} from 'react';
 import DebugTraceDisplay from './DebugTraceDisplay'
 import spinner from '../assets/pulse-1.1s-200px.svg';
-import './HomeDisplay.css';
+//import './HomeDisplay.css';
 import TraceSelector from './TraceSelector'
 import TraceFilters from './TraceFilters';
 
@@ -19,7 +19,7 @@ function TraceList (props) {
     props.setRefresh(!props.refresh);
   }
   return (
-    <div className='trace-list-container'>
+    <div className='relative flex'>
       <div >
         {props.loading && (
           <img className='loading-spinner' src={spinner} alt='Loading' />

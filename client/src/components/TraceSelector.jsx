@@ -68,7 +68,7 @@ const TraceSelector = (props) => {
 
 
   return (
-    <div className='trace-list-traces'>
+    <div className='flex flex-col w-[15%]'>
     <p>TraceList</p>
     {traces}
   </div>
