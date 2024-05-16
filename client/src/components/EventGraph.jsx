@@ -4,15 +4,14 @@ import NodeDetail from './NodeDetail';
 import LogPanel from './LogPanel';
 import NavBar from './NavBar';
 import TraceList from './TraceList';
-import './event-graph.css';
 
 const EventGraph = (props) => {
   const [nodeDetailState,setNodeDetailState] = useState({left: 150, top:150, display: 'none', curNode: null});
 
   return (
     <div>
-      <div className='EventGraph'>
-        <div className='EventPanelContainer'>
+      <div className='flex'>
+        <div className='flex bg-neutral-800 w-[50%]'>
           <NodeTree setNds={setNodeDetailState} nData={props.nodeData} />
           <NodeDetail nds={nodeDetailState} />
         </div>

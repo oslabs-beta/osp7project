@@ -7,13 +7,14 @@ import refreshIcon from '../assets/refresh-svgrepo-com.svg'
 
 const TraceFilters = (props) => {
 
+  console.log('PROPS: ', props)
 
   return (
     <div style={{width: '100%', verticalAlign: 'baseline'}}>
       <h3>Filters</h3>
 
-      <span className='filter__container'>
-        <span className='filter__label'>Start Time:</span>
+      <span className='inline-block mx-2'>
+        <span className='text-xs float-left'>Start Time:</span>
         <DatePicker
                       className='datepicker__override'
                       popperClassName='datepicker__popper__override'
@@ -26,8 +27,8 @@ const TraceFilters = (props) => {
                       dateFormat="MMMM d, yyyy h:mm aa"
                   />
       </span>
-      <span className='filter__container'>
-        <span className='filter__label'>End Time:</span>
+      <span className='inline-block mx-2'>
+        <span className='text-xs float-left'>End Time:</span>
         <DatePicker
                       className='datepicker__override'
                       popperClassName='datepicker__popper__override'
@@ -40,8 +41,8 @@ const TraceFilters = (props) => {
                       dateFormat="MMMM d, yyyy h:mm aa"
                   />
       </span>
-      <span className='filter__container'>
-        <span className='filter__label'>Refresh:</span>
+      <span className='inline-block mx-2'>
+        <span className='text-xs float-left'>Refresh:</span>
         <button onClick={props.handleRefreshData} style={{display: 'inline-block'}}>
          <img src={refreshIcon} width='24px'></img>
         </button>

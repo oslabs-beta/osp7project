@@ -1,34 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 #root {
   
   margin: 0;
   text-align: center;
+  font-family: 'Roboto';
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #ff3300aa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #ff3300aa);
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.datepicker__override {
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.datepicker__popper__override div div div  {
+  background-color: #232323;
+  color: #ffffff;
 }
 
+button{
+  color:rgb(255, 51, 0);
+  background-color: #252525
+}

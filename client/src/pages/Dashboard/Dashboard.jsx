@@ -7,7 +7,6 @@ import Metrics from '../../components/Metrics';
 import Settings from '../../components/Settings';
 import { Route, Routes } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import './Dashboard.css';
 import sampleTraces from '../../assets/sampleTraces.json';
 import ComingSoon from '../ComingSoon'
 
@@ -29,7 +28,7 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(false);
   const [appTreeNode, setAppTreeNode] = useState({});
   const [appLogs, setAppLogs] = useState([]);
-  const [start_value, onChangeStart] = useState(new Date()-1000*60*60*24*7);
+  const [start_value, onChangeStart] = useState(new Date(new Date()-1000*60*60*24*7));
   const [end_value, onChangeEnd] = useState(new Date());
 
   const navigate = useNavigate();
@@ -188,34 +187,50 @@ const Dashboard = () => {
   return (
     <div>
       <NavBar />
-      <div id='dashboardBody'>
-        <div id='sideBar'>
-          <button onClick={() => setCurrentPage('Home')} title='Home'>
+      <div className='flex'>
+        <div className='p-1 w-[3vw] flex flex-col text-center'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('Home')} title='Home'>
             <img src={homeIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('EventGraph')} title='Event Graph'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('EventGraph')} title='Event Graph'>
             <img src={eventGraphIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('AppTree')}>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('AppTree')}>
             <img src={mapIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('TraceList')}>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('TraceList')}>
             <img src={traceListIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('Metrics')} title='Metrics'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('Metrics')} title='Metrics'>
             <img src={metricsIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('Team')} title='Team'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('Team')} title='Team'>
             <img src={teamIcon} width='16px'></img>
           </button>
-          <button onClick={() => setCurrentPage('Settings')}>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={() => setCurrentPage('Settings')}>
             <img src={settingsIcon} width='16px'></img>
           </button>
-          <button onClick={()=>logout()} title='Logout'>
+          <button 
+            className='p-1 bg-transparent'
+            onClick={()=>logout()} title='Logout'>
             <img src={logoutIcon} width='16px'></img>
           </button>
         </div>
-        <div id='bodyContent'>
+        <div className='w-[94vw] bg-neutral-900'>
           <Body />
         </div>
       </div>

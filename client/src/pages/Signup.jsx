@@ -19,10 +19,11 @@ const Signup = () => {
       setErrorMessage('Passwords do not match');
       return;
     }
+    /*
     if (captcha !== 'passed') {
       setErrorMessage('Captcha required');
       return;
-    }
+    }*/
 
     const userData = {
       email,
@@ -95,13 +96,13 @@ const Signup = () => {
           required
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
-        <div className='captcha'>
+        {/*        <div className='captcha'>
           <Reaptcha
             sitekey={import.meta.env.VITE_CAPTCHA_KEY}
             onVerify={() => setCaptcha('passed')}
             required
           />
-        </div>
+        </div> */}
         <button
           className='login-btn'
           type='submit'

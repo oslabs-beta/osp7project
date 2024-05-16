@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import SimpleDataDisplay from './SimpleDataDisplay';
 import { PieChart } from 'react-minimal-pie-chart';
 import spinner from '../assets/pulse-1.1s-200px.svg';
-import './HomeDisplay.css';
+//import './HomeDisplay.css';
 
 const getStartLocale = (startSec) => {
   let start = new Date(0);
@@ -154,16 +154,17 @@ const HomeDisplay = (props) => {
     const origins = tallyToCircle(tallyOrigins(flattenTrace(props.traces[props.currentTrace])));
     
     const uniqueFuncs = uniqueFunctionsToCircle(uniqueFunctions(props.traces));
-    
 
     return (
-        <div className={'metrics__home__container'}>
+        <div className={'grid grid-cols-3 bg-neutral-900'}>
             {props.loading && (<img className='loading-spinner' src={spinner} alt='Loading' />)}
             <SimpleDataDisplay label={'Invocations'} metric={invocationCount} />
             <SimpleDataDisplay label={'Clean'} metric={successCount} />
             <SimpleDataDisplay label={'With Errors'} metric={errorCount} />
             <SimpleDataDisplay label={'Avg Duration'} metric={avgDuration} />
-            <div className={'metrics__visual__display'}>
+            <div className={'m-1 bg-neutral-800'}>
+              <div className='text-left ml-4 mt-4 text-sm text-slate-300'>Unique Functions</div>
+              <div className='p-4'>
               <PieChart
                 data={uniqueFuncs}
                 viewBoxSize={[100,100]}
@@ -180,8 +181,11 @@ const HomeDisplay = (props) => {
                     fontSize: '4px'
                }}
                 />
+                </div>
             </div>
-            <div className={'metrics__visual__display'}>
+            <div className={'m-1 bg-neutral-800'}>
+              <div className='text-left ml-4 mt-4 text-sm text-slate-300'>Origins</div>
+              <div className='p-4'>
               <PieChart
                 data={origins}
                 viewBoxSize={[100,100]}
@@ -198,6 +202,7 @@ const HomeDisplay = (props) => {
                     fontSize: '4px'
                }}
                 />
+                </div>
             </div>
 
         </div>
