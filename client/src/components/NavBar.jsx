@@ -1,5 +1,4 @@
 import React from 'react';
-import './nav-bar.css';
 import pulse from '../assets/pulse.svg';
 import { Link } from 'react-router-dom';
 
@@ -11,9 +10,9 @@ const NavBar = (props) => {
         <Link to='/dashboard'>
           <img src={pulse} width='48px' alt='LambdaPulse' />
         </Link>
-        <h1>LambdaPulse</h1>
+        <h1 className='flex pl-[10px]'>LambdaPulse</h1>
       </div>
-      <div id='links'>
+      <div className='relative top-[35px] flex justify-around w-[200px] text-[#ff3300]'>
         <p>
           <Link to='/about'>
             <span>About</span>

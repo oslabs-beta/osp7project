@@ -7,6 +7,7 @@ import refreshIcon from '../assets/refresh-svgrepo-com.svg'
 
 const TraceFilters = (props) => {
 
+  console.log('PROPS: ', props)
 
   return (
     <div style={{width: '100%', verticalAlign: 'baseline'}}>
